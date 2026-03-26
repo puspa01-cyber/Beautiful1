@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEX Gen 2 — Helix Robotics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ════════════════ NAVBAR ════════════════ -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="navbar-brand">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="16" fill="url(#nb-grad)"/>
+        <defs>
+          <linearGradient id="nb-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FF9966"/><stop offset="1" stop-color="#FF5E62"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span>Helix Robotics</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Specs</a></li>
+      <li><a href="#">Industries</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <a href="#" class="btn nav-cta">Request Demo</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ════════════════ MOBILE MENU ════════════════ -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mob-close" id="mob-close" aria-label="Close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"/>
+      <line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <a href="#" onclick="closeMenu()">Home</a>
+  <a href="#" onclick="closeMenu()">Specs</a>
+  <a href="#" onclick="closeMenu()">Industries</a>
+  <a href="#" onclick="closeMenu()">Pricing</a>
+  <a href="#" class="btn" onclick="closeMenu()">Request Demo</a>
+</div>
+
+<!-- ════════════════ SECTION 1 — SEE APEX IN ACTION ════════════════ -->
+<section id="hero-section">
+  <div class="container">
+    <h2 class="h2 text-center" style="margin-bottom:2.5rem;">See APEX in Action</h2>
+    <div class="hero-card">
+
+      <!-- Spotlight Effect -->
+      <svg class="spotlight" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none">
+        <g filter="url(#sf)">
+          <ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501"
+            transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
+            fill="white" fill-opacity="0.21"/>
+        </g>
+        <defs>
+          <filter id="sf" x="0.86" y="0.84" width="3785.16" height="2840.26"
+            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="151" result="blur"/>
+          </filter>
+        </defs>
+      </svg>
+
+      <!-- Left: Text -->
+      <div class="hero-left">
+        <span class="badge badge-white">APEX Gen 2</span>
+        <h3 class="hero-title">Built Human.<br>Built Better.</h3>
+        <p class="hero-sub">
+          78 DOF · 25 kg payload · 10-hr runtime<br>
+          HELIX Neural Engine · ISO 10218-1 certified
+        </p>
+      </div>
+
+      <!-- Right: Robot SVG Illustration -->
+      <div class="hero-right">
+        <svg class="robot-svg" viewBox="0 0 220 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="110" cy="318" rx="58" ry="10" fill="#0ea5e9" opacity=".18"/>
+          <!-- legs -->
+          <rect x="75" y="248" width="28" height="62" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+          <rect x="117" y="248" width="28" height="62" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+          <rect x="70" y="304" width="38" height="14" rx="6" fill="#0f172a" stroke="#0ea5e9" stroke-width="1"/>
+          <rect x="112" y="304" width="38" height="14" rx="6" fill="#0f172a" stroke="#0ea5e9" stroke-width="1"/>
+          <!-- hip -->
+          <rect x="68" y="232" width="84" height="20" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+          <!-- torso -->
+          <rect x="63" y="122" width="94" height="114" rx="14" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5"/>
+          <rect x="79" y="138" width="62" height="36" rx="6" fill="#0f172a" stroke="#0ea5e9" stroke-width="1"/>
+          <circle cx="110" cy="156" r="9" fill="#0ea5e9" opacity=".85"/>
+          <circle cx="110" cy="156" r="4.5" fill="#7dd3fc"/>
+          <!-- shoulders -->
+          <ellipse cx="52" cy="133" rx="15" ry="13" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5"/>
+          <ellipse cx="168" cy="133" rx="15" ry="13" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5"/>
+          <!-- arms -->
+          <rect x="38" y="144" width="20" height="70" rx="9" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+          <rect x="162" y="144" width="20" height="70" rx="9" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+          <!-- hands -->
+          <rect x="39" y="210" width="18" height="26" rx="7" fill="#0f172a" stroke="#0ea5e9" stroke-width="1"/>
+          <rect x="163" y="210" width="18" height="26" rx="7" fill="#0f172a" stroke="#0ea5e9" stroke-width="1"/>
+          <!-- neck -->
+          <rect x="97" y="106" width="26" height="20" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+          <!-- head -->
+          <rect x="70" y="50" width="80" height="60" rx="18" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5"/>
+          <!-- eyes -->
+          <rect x="82" y="66" width="20" height="11" rx="5" fill="#0ea5e9" opacity=".9"/>
+          <rect x="118" y="66" width="20" height="11" rx="5" fill="#0ea5e9" opacity=".9"/>
+          <rect x="82" y="66" width="20" height="11" rx="5" fill="#7dd3fc" opacity=".4"/>
+          <rect x="118" y="66" width="20" height="11" rx="5" fill="#7dd3fc" opacity=".4"/>
+          <!-- mouth -->
+          <rect x="88" y="88" width="44" height="4" rx="2" fill="#334155"/>
+          <!-- antenna -->
+          <rect x="106" y="28" width="8" height="24" rx="4" fill="#334155"/>
+          <circle cx="110" cy="24" r="7" fill="#0ea5e9"/>
+          <circle cx="110" cy="24" r="3.5" fill="#7dd3fc"/>
+          <!-- scan line animation -->
+          <rect x="71" y="52" width="78" height="2" rx="1" fill="#0ea5e9" opacity=".5">
+            <animateTransform attributeName="transform" type="translate" values="0,0;0,55;0,0" dur="2.2s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values=".5;.08;.5" dur="2.2s" repeatCount="indefinite"/>
+          </rect>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SECTION 2 — HERO INTRO ════════════════ -->
+<section class="flex-col-center fade-up">
+  <span class="badge">Now Deploying — Gen 2</span>
+  <h1 class="h2" style="margin-top:1.25rem;max-width:40rem;text-align:center;">
+    The Robot Built for <span style="color:var(--muted-fg)">Real Work</span>
+  </h1>
+  <p class="subtext" style="text-align:center;max-width:28rem;">
+    APEX by Helix Robotics. 78 degrees of freedom. 25 kg payload. 10-hour runtime. Deployable in days.
+  </p>
+
+  <div class="evervault-wrapper">
+    <div class="corner c-tl"></div>
+    <div class="corner c-tr"></div>
+    <div class="corner c-bl"></div>
+    <div class="corner c-br"></div>
+    <div class="ec-card" id="ec-card">
+      <div class="ec-glow" id="ec-glow"></div>
+      <div class="ec-chars" id="ec-chars"></div>
+      <span class="ec-text">APEX</span>
+    </div>
+    <p class="ec-label">Hover to explore APEX — the next generation of humanoid robotics.</p>
+    <span class="badge ec-tag">Helix Robotics · Gen 2</span>
+  </div>
+</section>
+
+<!-- ════════════════ SECTION 3 — FEATURES TABS ════════════════ -->
+<section class="fade-up">
+  <div class="container">
+    <div class="flex-col-center text-center" style="gap:1rem;">
+      <span class="badge">Helix Robotics</span>
+      <h2 class="h2" style="max-width:42rem;">Purpose-Built for the Real World</h2>
+      <p style="color:var(--muted-fg);">APEX adapts to your environment — not the other way around. One platform, infinite applications.</p>
+    </div>
+
+    <ul class="tabs-list" role="tablist">
+      <li>
+        <button class="tab-btn active" data-tab="t1" role="tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Industrial Precision
+        </button>
+      </li>
+      <li>
+        <button class="tab-btn" data-tab="t2" role="tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Smart Logistics
+        </button>
+      </li>
+      <li>
+        <button class="tab-btn" data-tab="t3" role="tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+          Adaptive AI
+        </button>
+      </li>
+    </ul>
+
+    <div class="tabs-body">
+      <!-- Tab 1 -->
+      <div class="tab-panel active" id="t1">
+        <div class="tab-text">
+          <span class="badge" style="width:fit-content;background:var(--bg)">Manufacturing</span>
+          <h3>Replace dangerous work. Not human workers.</h3>
+          <p>APEX handles repetitive, ergonomically hazardous, and precision-critical tasks — from body shop assembly to parts kitting. 25 kg payload, sub-millimeter repeatability, zero fatigue across every shift.</p>
+          <a href="#" class="btn btn-lg" style="width:fit-content;">Explore Manufacturing</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="Industrial manufacturing" loading="lazy"/>
+      </div>
+      <!-- Tab 2 -->
+      <div class="tab-panel" id="t2">
+        <div class="tab-text">
+          <span class="badge" style="width:fit-content;background:var(--bg)">Warehousing &amp; Fulfillment</span>
+          <h3>Built for the warehouse floor.</h3>
+          <p>APEX navigates any human-designed space without facility modifications. 24/7 operation with self-docking charge cycles and real-time fleet coordination across your entire site.</p>
+          <a href="#" class="btn btn-lg" style="width:fit-content;">Explore Logistics</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" alt="Warehouse logistics" loading="lazy"/>
+      </div>
+      <!-- Tab 3 -->
+      <div class="tab-panel" id="t3">
+        <div class="tab-text">
+          <span class="badge" style="width:fit-content;background:var(--bg)">HELIX Neural Engine</span>
+          <h3>One robot. Infinite tasks.</h3>
+          <p>The HELIX Neural Engine learns new tasks from human demonstrations in under 4 hours. Natural language instruction means anyone on your team can direct APEX — no code, no robotics expertise needed.</p>
+          <a href="#" class="btn btn-lg" style="width:fit-content;">Explore the AI</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80" alt="AI neural engine" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SECTION 4 — LOGO CLOUD ════════════════ -->
+<section class="fade-up">
+  <div class="container">
+    <div style="max-width:48rem;margin:0 auto;text-align:center;">
+      <h2 class="h2" style="margin-bottom:.75rem;">Backed by world-class technology</h2>
+      <p class="subtext" style="margin-bottom:2rem;">Our compute, AI, and infrastructure partners power every APEX deployment.</p>
+      <div class="logo-grid">
+        <div class="logo-cell alt"><img src="https://svgl.app/library/nvidia-wordmark-light.svg" alt="Nvidia"/></div>
+        <div class="logo-cell">    <img src="https://svgl.app/library/amazon_wordmark_light.svg" alt="Amazon"/></div>
+        <div class="logo-cell alt"><img src="https://svgl.app/library/github_wordmark_light.svg" alt="GitHub"/></div>
+        <div class="logo-cell">    <img src="https://svgl.app/library/openai_wordmark_light.svg" alt="OpenAI"/></div>
+        <div class="logo-cell">    <img src="https://svgl.app/library/google_wordmark.svg" alt="Google"/></div>
+        <div class="logo-cell alt"><img src="https://svgl.app/library/microsoft_wordmark.svg" alt="Microsoft"/></div>
+        <div class="logo-cell">    <img src="https://svgl.app/library/claude-ai-wordmark-icon_light.svg" alt="Claude AI"/></div>
+        <div class="logo-cell alt"><img src="https://svgl.app/library/intel_wordmark.svg" alt="Intel"/></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SECTION 5 — TESTIMONIALS ════════════════ -->
+<section class="fade-up">
+  <div class="container">
+    <div class="flex-col-center text-center" style="max-width:34rem;margin:0 auto;gap:.5rem;">
+      <span class="badge">Customer Stories</span>
+      <h2 class="h2" style="margin-top:1rem;">Trusted on the factory floor</h2>
+      <p class="subtext">From automotive assembly to overnight retail — real results from real deployments.</p>
+    </div>
+
+    <div class="test-grid">
+
+      <!-- Column 1 — 15s -->
+      <div class="test-col"><div class="test-inner" style="--dur:15s;">
+        <div class="test-card">"APEX handles our most ergonomically hazardous tasks with precision we've never achieved before. Our OSHA incident rate dropped 40% in six months."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Webb"><div><div class="test-name">Marcus Webb</div><div class="test-role">VP Manufacturing, Continental Auto</div></div></div></div>
+        <div class="test-card">"We went from pilot to full-scale deployment in 11 days. No facility changes, no new software stack. APEX just worked."<div class="test-author"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Nair"><div><div class="test-name">Priya Nair</div><div class="test-role">Director of Operations, Tier-1 Supplier</div></div></div></div>
+        <div class="test-card">"At our production volume, APEX breaks even in under 18 months. Our finance team approved a fleet of 40 units on the first proposal."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt="James Okafor"><div><div class="test-name">James Okafor</div><div class="test-role">CFO, Precision Parts Inc.</div></div></div></div>
+        <!-- duplicated for seamless infinite loop -->
+        <div class="test-card">"APEX handles our most ergonomically hazardous tasks with precision we've never achieved before. Our OSHA incident rate dropped 40% in six months."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Webb"><div><div class="test-name">Marcus Webb</div><div class="test-role">VP Manufacturing, Continental Auto</div></div></div></div>
+        <div class="test-card">"We went from pilot to full-scale deployment in 11 days. No facility changes, no new software stack. APEX just worked."<div class="test-author"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Nair"><div><div class="test-name">Priya Nair</div><div class="test-role">Director of Operations, Tier-1 Supplier</div></div></div></div>
+        <div class="test-card">"At our production volume, APEX breaks even in under 18 months. Our finance team approved a fleet of 40 units on the first proposal."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt="James Okafor"><div><div class="test-name">James Okafor</div><div class="test-role">CFO, Precision Parts Inc.</div></div></div></div>
+      </div></div>
+
+      <!-- Column 2 — 19s -->
+      <div class="test-col"><div class="test-inner" style="--dur:19s;">
+        <div class="test-card">"We've processed over 2 million tote movements with our APEX fleet without a single safety incident. That's the number I care about most."<div class="test-author"><img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Sandra Liu"><div><div class="test-name">Sandra Liu</div><div class="test-role">Head of Fulfillment, EchoShip Logistics</div></div></div></div>
+        <div class="test-card">"Every other robot we evaluated required warehouse redesign. APEX walked in and started working. It's genuinely remarkable."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Tariq Hassan"><div><div class="test-name">Tariq Hassan</div><div class="test-role">CTO, Swift Distribution</div></div></div></div>
+        <div class="test-card">"The natural language interface changed everything. My supervisors direct APEX like a new hire. No robotics training required."<div class="test-author"><img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Elena Morozov"><div><div class="test-name">Elena Morozov</div><div class="test-role">SVP Operations, NordEx Retail</div></div></div></div>
+        <!-- duplicated -->
+        <div class="test-card">"We've processed over 2 million tote movements with our APEX fleet without a single safety incident. That's the number I care about most."<div class="test-author"><img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Sandra Liu"><div><div class="test-name">Sandra Liu</div><div class="test-role">Head of Fulfillment, EchoShip Logistics</div></div></div></div>
+        <div class="test-card">"Every other robot we evaluated required warehouse redesign. APEX walked in and started working. It's genuinely remarkable."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Tariq Hassan"><div><div class="test-name">Tariq Hassan</div><div class="test-role">CTO, Swift Distribution</div></div></div></div>
+        <div class="test-card">"The natural language interface changed everything. My supervisors direct APEX like a new hire. No robotics training required."<div class="test-author"><img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Elena Morozov"><div><div class="test-name">Elena Morozov</div><div class="test-role">SVP Operations, NordEx Retail</div></div></div></div>
+      </div></div>
+
+      <!-- Column 3 — 17s -->
+      <div class="test-col"><div class="test-inner" style="--dur:17s;">
+        <div class="test-card">"Helix Robotics has done what nobody else has: built a humanoid that industrial customers can actually trust. APEX is the real thing."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/14.jpg" alt="Dr. Chen Wei"><div><div class="test-name">Dr. Chen Wei</div><div class="test-role">Director of Robotics Research</div></div></div></div>
+        <div class="test-card">"We've evaluated every humanoid on the market. APEX's combination of dexterity, AI adaptability, and uptime puts it in a category of its own."<div class="test-author"><img src="https://randomuser.me/api/portraits/women/71.jpg" alt="Amara Osei"><div><div class="test-name">Amara Osei</div><div class="test-role">Director of Automation, GlobalManu Corp</div></div></div></div>
+        <div class="test-card">"Our APEX fleet works the night shift while our team goes home. Morning crew walks in to a fully stocked facility. Every single day."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/38.jpg" alt="Kaito Yamamoto"><div><div class="test-name">Kaito Yamamoto</div><div class="test-role">Store Operations Director, Brightline Retail</div></div></div></div>
+        <!-- duplicated -->
+        <div class="test-card">"Helix Robotics has done what nobody else has: built a humanoid that industrial customers can actually trust. APEX is the real thing."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/14.jpg" alt="Dr. Chen Wei"><div><div class="test-name">Dr. Chen Wei</div><div class="test-role">Director of Robotics Research</div></div></div></div>
+        <div class="test-card">"We've evaluated every humanoid on the market. APEX's combination of dexterity, AI adaptability, and uptime puts it in a category of its own."<div class="test-author"><img src="https://randomuser.me/api/portraits/women/71.jpg" alt="Amara Osei"><div><div class="test-name">Amara Osei</div><div class="test-role">Director of Automation, GlobalManu Corp</div></div></div></div>
+        <div class="test-card">"Our APEX fleet works the night shift while our team goes home. Morning crew walks in to a fully stocked facility. Every single day."<div class="test-author"><img src="https://randomuser.me/api/portraits/men/38.jpg" alt="Kaito Yamamoto"><div><div class="test-name">Kaito Yamamoto</div><div class="test-role">Store Operations Director, Brightline Retail</div></div></div></div>
+      </div></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SECTION 6 — WORLD MAP ════════════════ -->
+<section class="fade-up">
+  <div style="max-width:80rem;margin:0 auto;text-align:center;padding:0 1.5rem;">
+    <h2 class="h2">APEX. <span style="color:var(--muted-fg)" id="deployed-text"></span></h2>
+    <p class="subtext" style="max-width:40rem;margin:.75rem auto 2rem;">
+      From automotive plants in Stuttgart to fulfillment centers in Seattle — operating around the clock, across six continents.
+    </p>
+  </div>
+  <div style="max-width:80rem;margin:0 auto;padding:0 1.5rem;">
+    <div class="map-wrap">
+      <div class="map-dots"></div>
+      <svg class="map-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" id="map-svg">
+        <defs>
+          <linearGradient id="pg" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="white"   stop-opacity="0"/>
+            <stop offset="5%"   stop-color="#0ea5e9" stop-opacity="1"/>
+            <stop offset="95%"  stop-color="#0ea5e9" stop-opacity="1"/>
+            <stop offset="100%" stop-color="white"   stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SECTION 7 — FAQ ════════════════ -->
+<section class="fade-up">
+  <div class="container">
+    <div style="max-width:48rem;margin:0 auto;">
+      <h2 class="h2" style="margin-bottom:.5rem;">Frequently Asked Questions</h2>
+      <p class="subtext" style="margin-bottom:2rem;">Everything you need to know about APEX and Helix Robotics.</p>
+
+      <div class="faq">
+        <div class="faq-item open">
+          <button class="faq-q">What is APEX?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-body"><p>APEX is the second-generation humanoid robot from Helix Robotics — a 5'8", 62 kg general-purpose robot with 78 degrees of freedom, a 25 kg payload capacity, and a 10-hour operational runtime. It is designed to operate in any human-built environment without facility modifications.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What industries is APEX designed for?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-body"><p>APEX is purpose-built for manufacturing, logistics and warehousing, retail operations, and environments involving repetitive, ergonomically hazardous, or physically demanding tasks. Current deployments span automotive assembly, fulfillment center operations, and overnight retail restocking.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What are APEX's key technical specifications?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-body"><p>Height: 5'8" (173 cm) · Weight: 62 kg · Total DOF: 78 (16 per hand) · Walking speed: 1.6 m/s · Payload: 25 kg · Runtime: 10 hours · Onboard compute: Nvidia Jetson Thor · Vision: 4× RGB-D cameras with 360° coverage · LiDAR, IMU, full-body force/torque sensors · IP54 rated.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How long does deployment take?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-body"><p>Most customers achieve productive task execution within 7–14 days of delivery. The HELIX Neural Engine learns customer-specific tasks from human demonstrations — no custom programming required. Our deployment team handles facility integration end-to-end.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What safety certifications does APEX hold?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-body"><p>APEX is certified to ISO 10218-1 (industrial robot safety), ISO/TS 15066 (collaborative robot force limits), CE marked for European deployment, and UL listed for North American facilities. Every unit ships with a full safety integration package.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What does APEX cost?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-body"><p>APEX is available on a purchase or Robotics-as-a-Service (RaaS) subscription model starting at $4,200/month per unit. Enterprise fleet pricing is available for orders of 10+ units. Most customers achieve full cost recovery within 24 months.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How does the HELIX Neural Engine work?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-body"><p>The HELIX Neural Engine is a multimodal AI system combining computer vision, proprioceptive feedback, and large language model reasoning. Operators demonstrate a task once; APEX builds a generalizable policy within hours. The system improves continuously via federated learning — every robot learns from every deployment, globally.</p></div>
+        </div>
+      </div>
+
+      <p style="color:var(--muted-fg);margin-top:1.5rem;">
+        Can't find what you're looking for? Contact our
+        <a href="#" style="color:var(--fg);text-decoration:underline;">customer support team</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 Helix Robotics. All rights reserved.</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
